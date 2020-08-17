@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import { connect } from 'react-redux';
+import { ThunkDispatch } from 'redux-thunk';
+import { Action } from 'redux';
+import {fetchCitiesAsync} from './redux/city.actions';
+import Header from './components/header/header.component';
+import TopCity from './components/top-city/top-city.component';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface Props{
+  initializeCities: Function
 }
 
-export default App;
+const App: React.FC<Props> = (props: Props) => {
+
+  const {initializeCities} = props;
+
+  useEffect(() => {
+
+    initializeCities();
+    
+  }, [initializeCities])
+
+  return (
+    <div className="App">
+      <Header />
+      <TopCity/>
+    </div>
+  )
+}
+
+const mapDispatchToProps = (dispatchEvent: ThunkDispatch<{}, {}, Action<string>>) => ({
+  initializeCities: () => dispatchEvent(fetchCitiesAsync())
+})
+
+export default connect(null, mapDispatchToProps)(App);

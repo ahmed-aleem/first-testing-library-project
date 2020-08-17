@@ -1,0 +1,39 @@
+.top-cities-container{
+    max-width: 1024px;
+    margin: 5em auto;
+}
+
+.top-cities{
+    display: grid;
+    align-items: start;
+    justify-content: start;
+    margin: 2em auto;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.top-city{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    min-width: 150px;
+    height: 250px;
+    background-image: linear-gradient(#123, #321);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1em;
+    color: #fff;
+}
+
+h4{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}

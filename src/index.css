@@ -1,4 +1,4 @@
-body {
+body, * {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,7 +7,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header{
+  height: 50vh;
+  background-image: linear-gradient(#4445,#5555), url('https://ui.cltpstatic.com/ct-activities-static/media/background.b1c7018c.png') ;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 45px;
+}
+
+p{
+  font-size: 24px;
+  letter-spacing: .29px;
+  line-height: 34px;
+  padding: 25px 0;
 }
