@@ -1,7 +1,7 @@
 import {cityActionTypes} from './city.types';
 import {getFilteredCities} from '../utils/filterData';
 
-interface BasicState{
+export interface BasicState{
     isCities: boolean,
     cities: [{city_name?: string}],
     filteredCities: [{city_name?: string}],
@@ -9,12 +9,12 @@ interface BasicState{
     errorMessage: string | null
 }
 
-interface BasicAction{
+export interface BasicAction{
     type: string,
     payload: {city_name?: string}[] | string | Function
 }
 
-const INITIAL_STATE: BasicState = {
+export const INITIAL_STATE: BasicState = {
     isCities: false,
     cities: [{}],
     filteredCities: [{}],

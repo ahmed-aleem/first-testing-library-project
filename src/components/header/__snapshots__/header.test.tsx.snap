@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <div
+    class="header"
+  >
+    <h1>
+      Welcome to Telangana!
+    </h1>
+    <p>
+      Explore activities in 50+ cities across the state with us
+    </p>
+    <div
+      class="search-section"
+    >
+      <input
+        class="search-input"
+        name="search"
+        placeholder="search for a city in telangana"
+        type="search"
+        value=""
+      />
+      <div
+        class="search-results-container"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
